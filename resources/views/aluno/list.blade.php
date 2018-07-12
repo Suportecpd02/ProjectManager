@@ -31,13 +31,15 @@
                             <th>Curso</th>
                             <th>Semestre</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Maria</td>
-                            <td>José</td>
-                            <td>ADS</td>
-                            <td>4</td>
-                        </tr>
+                        @foreach($alunos as $aluno)
+                            <tr>
+                                <td>{{$aluno->id_aluno}}</td>
+                                <td>{{$aluno->tx_nome}}</td>
+                                <td>{{$aluno->tx_sobrenome}}</td>
+                                <td>{{$aluno->tx_curso}}</td>
+                                <td>{{$aluno->nu_semestre}}</td>
+                            </tr>
+                        @endforeach
                     </table>
                 </div>
             </div>
@@ -45,4 +47,4 @@
     </div>
     </body>
 </html>
-@stop
+@endsection

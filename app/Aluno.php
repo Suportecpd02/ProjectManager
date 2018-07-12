@@ -8,7 +8,9 @@
 
 namespace App;
 
-class Aluno
+use Illuminate\Database\Eloquent\Model;
+
+class Aluno extends Model
 {
     protected $table = "tb_aluno";
     protected $primaryKey = "id_aluno";

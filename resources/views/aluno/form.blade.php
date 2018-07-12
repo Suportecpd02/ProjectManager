@@ -2,8 +2,8 @@
 <html lang="{{ app()->getLocale() }}">
 @extends('import')
 @section('conteudo')
-    <div class="container-fluid">
-        <form name="form" class="form">
+    <div class="card container-fluid">
+        <form name="form" method="post" action="{{route('aluno.store')}}">
             <div class="col s12">
                 <div class="modal-content" style="height: auto">
                     <div class="row" style="margin-bottom: 10px;">
@@ -40,8 +40,8 @@
                         <div class="col s12 m12 l12" align="right">
                             <a id="botaoVoltar" class="btn grey waves-effect waves-light" href="{{ route('aluno.list') }}">Voltar
                             </a>
-                            <a id="botaoSalvar" class="btn green waves-effect waves-light" href="{{ route('aluno.salvar') }}">Salvar
-                            </a>
+                            <button id="botaoSalvar" type="submit" class="btn green waves-effect waves-light">Salvar
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -54,4 +54,4 @@
             var instances = M.FormSelect.init(elems, options);
         });*/
     </script>
-@stop
+@endsection
