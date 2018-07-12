@@ -43,5 +43,8 @@
         background-color: #4CAF50;
         color: white;
     }
+    .container-fluid {
+        margin: 50px 100px 0px 100px;
+    }
 </style>
 @yield('conteudo')

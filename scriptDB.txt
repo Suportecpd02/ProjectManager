@@ -1,0 +1,36 @@
+create table tb_aluno
+(
+  id_aluno     integer   not null
+    constraint tb_aluno_pkey
+    primary key,
+  tx_nome      varchar(50),
+  tx_sobrenome varchar(50),
+  tx_curso     varchar(20),
+  nu_semestre  integer,
+  updated_at   timestamp not null,
+  created_at   timestamp not null
+);
+
+create table tb_projeto
+(
+  id_projeto   integer   not null
+    constraint tb_projeto_pkey
+    primary key,
+  dt_prazo     timestamp,
+  tx_descricao varchar(100),
+  updated_at   timestamp not null,
+  created_at   timestamp not null
+);
+
+create table tb_aluno_projeto
+(
+  fk_aluno   integer not null
+    constraint "fk projeto aluno aluno"
+    references tb_aluno,
+  fk_projeto integer not null
+    constraint "fk projeto aluno projeto"
+    references tb_projeto,
+  updated_at timestamp,
+  created_at timestamp
+);
+
