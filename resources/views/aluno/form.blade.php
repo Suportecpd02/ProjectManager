@@ -13,18 +13,20 @@
                     </div>
                     <hr>
                     <div class="row">
+                        {{--<input type="hidden" name="_token" value="{{csrf_token()}}">--}}
+                        {!! csrf_token() !!}
                         <div class="input-field col s4">
-                            <input id="tx_nome" type="text" class="" maxlength="60" required>
+                            <input id="tx_nome" type="text" class="" name="tx_nome" maxlength="60" required value="" >
                             <label for="tx_nome" class="active">Nome</label>
                         </div>
                         <div class="input-field col s5">
-                            <input id="tx_sobrenome" type="text" class="" maxlength="60" required>
+                            <input id="tx_sobrenome" type="text" class="" maxlength="60" name="tx_sobrenome" required value="">
                             <label for="tx_sobrenome" class="active">Sobrenome</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s4 browser-default">
-                            <select class="browser-default">
+                            <select class="browser-default" name="tx_curso">
                                 <option value="" disabled selected>Curso</option>
                                 <option value="ads">ADS</option>
                                 <option value="redes">Redes</option>
@@ -32,13 +34,13 @@
                             </select>
                         </div>
                         <div class="input-field col s2">
-                            <input id="nu_semestre" type="number" class="" maxlength="60" required>
+                            <input id="nu_semestre" type="number" class="" maxlength="60" required name="nu_semestre" value="">
                             <label for="nu_semestre" class="active">Semestre</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 m12 l12" align="right">
-                            <a id="botaoVoltar" class="btn grey waves-effect waves-light" href="{{ route('aluno.list') }}">Voltar
+                            <a id="botaoVoltar" class="btn grey waves-effect waves-light" href="<?php  route('aluno.list') ?>">Voltar
                             </a>
                             <button id="botaoSalvar" type="submit" class="btn green waves-effect waves-light">Salvar
                             </button>

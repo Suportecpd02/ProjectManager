@@ -4,6 +4,7 @@
     <title>Laravel</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="{!! asset('assets/css/materialize.min.css') !!}" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="{!! asset('assets/js/materialize.min.js') !!}" type="javascript"></script>
 </head>
 <style>

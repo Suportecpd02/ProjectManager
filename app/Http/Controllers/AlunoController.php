@@ -13,6 +13,17 @@ class AlunoController extends Controller
     }
 
     public function store(Request $request){
-        return var_dump($request->all());
+        print_r($request->input());
+        $store = Aluno::create($request->input());
+        return view('aluno.store', compact('store'));
+    }
+
+    public function form($id = null){
+        if($id != null){
+            $aluno = Aluno::where('id_aluno', $id)->get();
+          return view('aluno.form', $aluno);
+        } else {
+            return view('aluno.form');
+        }
     }
 }

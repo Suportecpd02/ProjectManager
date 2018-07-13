@@ -30,6 +30,7 @@
                             <th>Sobrenome</th>
                             <th>Curso</th>
                             <th>Semestre</th>
+                            <th colspan="2">Ações</th>
                         </tr>
                         @foreach($alunos as $aluno)
                             <tr>
@@ -38,6 +39,7 @@
                                 <td>{{$aluno->tx_sobrenome}}</td>
                                 <td>{{$aluno->tx_curso}}</td>
                                 <td>{{$aluno->nu_semestre}}</td>
+                                <td><a href="{{route('aluno.form', $aluno->id_aluno)}}"><i class="material-icons">edit</i></a></td>
                             </tr>
                         @endforeach
                     </table>

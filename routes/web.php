@@ -5,10 +5,9 @@ Route::group(['prefix' => 'aluno'], function (){
        return view('aluno/list');
    })->name('aluno.list');*/
    Route::get('/list', 'AlunoController@getAlunos')->name('aluno.list');
-   Route::get('/form', function (){
-       return view('aluno/form');
-   })->name('aluno.form');
-    Route::post('/salvar', 'AlunoController@store')->name('aluno.store');
+   Route::get('/form/{id?}', 'AlunoController@form')->name('aluno.form');
+   Route::post('/store', 'AlunoController@store')->name('aluno.store');
+   Route::get('/edit/{id}', 'AlunoController@edit')->name('aluno.edit');
 });
 
 Route::get('/', function () {
