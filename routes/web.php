@@ -8,6 +8,7 @@ Route::group(['prefix' => 'aluno'], function (){
    Route::get('/form/{id?}', 'AlunoController@form')->name('aluno.form');
    Route::post('/store', 'AlunoController@store')->name('aluno.store');
    Route::get('/edit/{id}', 'AlunoController@edit')->name('aluno.edit');
+   Route::get('/delete/{id}', 'AlunoController@delete')->name('aluno.delete');
 });
 
 Route::get('/', function () {

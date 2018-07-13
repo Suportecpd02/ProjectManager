@@ -40,6 +40,7 @@
                                 <td>{{$aluno->tx_curso}}</td>
                                 <td>{{$aluno->nu_semestre}}</td>
                                 <td><a href="{{route('aluno.form', $aluno->id_aluno)}}"><i class="material-icons">edit</i></a></td>
+                                <td><a href="{{route('aluno.delete', $aluno->id_aluno)}}"><i class="material-icons">delete</i></a></td>
                             </tr>
                         @endforeach
                     </table>

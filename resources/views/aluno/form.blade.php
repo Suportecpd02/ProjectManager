@@ -13,8 +13,7 @@
                     </div>
                     <hr>
                     <div class="row">
-                        {{--<input type="hidden" name="_token" value="{{csrf_token()}}">--}}
-                        {!! csrf_token() !!}
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <div class="input-field col s4">
                             <input id="tx_nome" type="text" class="" name="tx_nome" maxlength="60" required value="" >
                             <label for="tx_nome" class="active">Nome</label>
